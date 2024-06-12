@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Домашнее Задание №2</title>
+</head>
+<body>
+   
+    <script> 
+        /*
+        var attempt = 0; 
+        var answer = prompt("Отгадайте загадку. Весит груша нельзя скушать. Что это?"); 
+
+        if (answer == "Лампочка" || answer == "лампочка" || answer == "ЛАМПОЧКА") {
+            document.write("Правильный ответ! </br>"); 
+            attempt++
+        }  else {
+            document.write("Неправильный ответ! </br>");
+        }  
+
+        var answer_1 = prompt("Отгадайте загадку. Зимой и летом, одним цветом. Что это?")
+
+        if (answer_1 == "ЁЛКА" || answer_1 == "Ёлка" || answer_1 == "ёлка") { 
+            document.write("Правильный ответ!</br>") 
+            attempt++
+        } else { 
+            document.write("Неправильный ответ!</br>")
+        } 
+
+        var answer_2 = prompt("Отгадайте загадку. Зубастые,а не кусаются. Что это?")
+
+        if (answer_2 == "Грабли" || answer_2 == "ГРАБЛИ" || answer_2 == "грабли") {
+            document.write("Правильный ответ! </br>")
+            attempt++
+        } else { 
+            document.write("Неправильный ответ! </br>") 
+        } 
+
+        var answer_3 = prompt(" Отгадайте загадку. Пять чуланов, одна дверь. Что это?") 
+
+        if (answer_3 == "Перчатка" || answer_3 == "перчатка" || answer_3 == "ПЕРЧАТКА") { 
+            document.write("Правильный ответ! </br>")
+            attempt++
+        } else { 
+            document.write("Неправильнйы ответ! </br>")
+        }
+
+        alert("Правильных ответов:" + attempt);
+        */ 
+        /*
+        var contribution = +prompt("Введите сумму вклада")
+        var percent = +prompt("Введите годовой процент для вклада")
+
+        var x = contribution * percent / 100; 
+        var summa = 0
+        for (var i = 1; i <= 5; i++){ 
+            summa = i * x;  
+            document.write(summa + "</br>") 
+        }
+        */ 
+        var answer = parseInt(Math.random() * 100);
+        alert("Угадайте число от 1 до 100. Кто первый угадает, тот и победил.")
+        
+        while (answer == 0 || answer >= 0) {
+            var userAnswer_player_one = +prompt("Ход первого игрока")
+
+            if(answer > userAnswer_player_one){ 
+                alert("Слишком маленькое число!")
+            }  else if (answer < userAnswer_player_one){ 
+                alert ("Слишком большое число") 
+            } else if(answer == userAnswer_player_one) { 
+                alert("Первый игрок угадал число. Число: " + answer)
+                break;
+            } else if(userAnswer_player_one >= 101) {
+                alert("Игру прекратил первый игрок") 
+                break;
+            }
+
+            var userAnswer_player_two = +prompt("Ход второго игрока") 
+
+            if(answer > userAnswer_player_two){ 
+                alert("Слишком маленькое число!")
+            }  else if (answer < userAnswer_player_two){ 
+                alert ("Слишком большое число")
+            }  else if (answer == userAnswer_player_two){ 
+                alert("Второй игрок угадал число. Число: " + answer) 
+                break; 
+            } else if(userAnswer_player_two >= 101) {
+                alert("Игру прекратил второй игрок") 
+                break;
+            } 
+        }
+    </script>
+
+</body>
+</html>
